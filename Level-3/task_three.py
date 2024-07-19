@@ -127,6 +127,8 @@ class Marking:
     def mark(self) -> float:
         """Counts points from quiz and returns result in %."""
         total_score = 0
+        if len(self._quiz.questions) == 0:
+            return 0
         for question in self._quiz.questions:
             if question.chosen_answer == question.correct_answer:
                 total_score += 1
