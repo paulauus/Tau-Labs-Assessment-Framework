@@ -107,3 +107,17 @@ def test_marking_assessment_type():
     assessment = marking.generate_assessment()
     assert isinstance(assessment, Assessment)
     assert isinstance(assessment, TechnicalAssessment)
+
+
+def test_marking_assessment_type_presentation():
+    """This tests for invalid test types for generating assessments."""
+    questions = [
+        Question("What is 1 + 1? A:2 B:4 C:5 D:8", "A", "A"),
+        Question("What is 2 + 2? A:2 B:4 C:5 D:8", "B", "B"),
+        ]
+    quiz = Quiz(questions, "Presentation", "presentation")
+    marking = Marking(quiz)
+    with pytest.raises(ValueError, match="Cannot generate score for this type of assessment."):
+        marking.generate_assessment()
+
+

@@ -3,11 +3,7 @@
 
 from datetime import date
 from dateutil.relativedelta import relativedelta
-#####
-#
-# COPY YOUR CODE FROM LEVEL 2 BELOW
-#
-#####
+
 
 class Trainee:
     """This class creates a Trainee based on their name, email and age."""
@@ -94,15 +90,10 @@ class PresentationAssessment(Assessment):
         """Returns a score worth 60% of the assessment."""
         score = self.score * 0.6
         return score
-
-#####
-#
-# COPY YOUR CODE FROM LEVEL 2 ABOVE
-#
-#####
-
+    
 
 class Question:
+    """Creates an object with a question, the chosen answer, and the correct answer."""
 
     def __init__(self, question: str, chosen_answer: str, correct_answer: str):
         self.question = question
@@ -111,6 +102,7 @@ class Question:
 
 
 class Quiz:
+    """Creates an object that consists of a list of questions, name and quiz type."""
 
     def __init__(self, questions: list, name: str, type: str):
         self.questions = questions
@@ -119,6 +111,7 @@ class Quiz:
 
 
 class Marking:
+    """Checks the Quiz object answers and calculates a total score."""
 
     def __init__(self, quiz: Quiz) -> None:
         self._quiz = quiz
@@ -145,7 +138,7 @@ class Marking:
             score = self.mark()
             return TechnicalAssessment(self._quiz.name, score)
         else:
-            raise ValueError("Not a valid quiz.")
+            raise ValueError("Cannot generate score for this type of assessment.")
 
 
 if __name__ == "__main__":
@@ -160,3 +153,6 @@ if __name__ == "__main__":
     quiz = Quiz(questions, "Maths Quiz", "multiple-choice")
 
     # Add an implementation for the Marking class below to test your code
+
+    marking = Marking(quiz)
+    print(marking.mark())
