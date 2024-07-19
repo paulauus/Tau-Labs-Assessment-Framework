@@ -3,8 +3,10 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
+
 class Trainee:
     """This class creates a Trainee based on their name, email and age."""
+
     def __init__(self, name: str, email: str, date_of_birth: date):
         self.name = name
         self.email = email
@@ -17,11 +19,11 @@ class Trainee:
         # relativedelta provides the difference in years
         age = relativedelta(today, self.date_of_birth).years
         return float(age)
-    
+
     def add_assessment(self, a) -> None:
         """Adds an Assessment object to the list of Trainee's assessments."""
         return self.assessments.append(a)
-    
+
     def get_assessment(self, assessment_name: str) -> None:
         """Returns the Assessment object if its name matches method parameter."""
         for item in self.assessments:
@@ -31,6 +33,7 @@ class Trainee:
 
 class Assessment:
     """Create an object for a type of assessment with a title and score."""
+
     def __init__(self, name: str, type: str, score: float):
         self.name = name
         self.type = type
@@ -40,8 +43,7 @@ class Assessment:
         valid_types = ["technical", "multiple-choice", "presentation"]
         if type not in valid_types:
             raise ValueError("Not a valid type.")
-    
-        
+
 
 if __name__ == "__main__":
     trainee = Trainee("Sigma", "trainee@sigmalabs.co.uk", date(1990, 1, 1))
