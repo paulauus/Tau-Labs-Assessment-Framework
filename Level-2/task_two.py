@@ -1,6 +1,5 @@
 from datetime import date
-
-
+from dateutil import relativedelta
 #####
 #
 # COPY YOUR CODE FROM LEVEL 1 BELOW
@@ -33,6 +32,15 @@ class Trainee:
         for item in self.assessments:
             if item.name == assessment_name:
                 return item
+            
+    def get_assessment_of_type(self, type: str) -> list:
+        """Returns the number of instances a type of assessment is present."""
+        same_type_assessments = []
+        for item in self.assessments:
+            if item.type == type:
+                same_type_assessments.append(item)
+        return same_type_assessments
+
 
 
 class Assessment:
@@ -54,6 +62,7 @@ class MultipleChoiceAssessment(Assessment):
     def __init__(self, name: str, score: float):
         self.name = name
         self.score = score
+        self.type = "multiple-choice"
 
     def calculate_score(self):
         """Returns a score worth 70% of the assessment."""
@@ -69,6 +78,7 @@ class TechnicalAssessment(Assessment):
     def __init__(self, name: str, score: float):
         self.name = name
         self.score = score
+        self.type = "technical"
 
     def calculate_score(self):
         """Returns a score worth 100% of the assessment."""
@@ -82,6 +92,7 @@ class PresentationAssessment(Assessment):
     def __init__(self, name: str, score: float):
         self.name = name
         self.score = score
+        self.type = "presentation"
 
     def calculate_score(self):
         """Returns a score worth 60% of the assessment."""
