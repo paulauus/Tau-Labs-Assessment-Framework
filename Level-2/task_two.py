@@ -1,10 +1,9 @@
+# pylint: disable=too-few-public-methods
+"""Level 2 of Week 2 Assessment."""
+
 from datetime import date
-from dateutil import relativedelta
-#####
-#
-# COPY YOUR CODE FROM LEVEL 1 BELOW
-#
-#####
+from dateutil.relativedelta import relativedelta
+
 class Trainee:
     """This class creates a Trainee based on their name, email and age."""
 
@@ -32,6 +31,7 @@ class Trainee:
         for item in self.assessments:
             if item.name == assessment_name:
                 return item
+        return None
             
     def get_assessment_of_type(self, type: str) -> list:
         """Returns the number of instances a type of assessment is present."""
@@ -40,7 +40,6 @@ class Trainee:
             if item.type == type:
                 same_type_assessments.append(item)
         return same_type_assessments
-
 
 
 class Assessment:
@@ -59,53 +58,44 @@ class Assessment:
 
 class MultipleChoiceAssessment(Assessment):
     """Subclass for a multiple choice assessment type."""
+
     def __init__(self, name: str, score: float):
-        self.name = name
-        self.score = score
-        self.type = "multiple-choice"
+        super().__init__(name, "multiple-choice", score)
 
     def calculate_score(self):
         """Returns a score worth 70% of the assessment."""
         score = self.score * 0.7
         return score
 
-    pass
-
 
 class TechnicalAssessment(Assessment):
     """Subclass for a technical assessment type."""
 
     def __init__(self, name: str, score: float):
-        self.name = name
-        self.score = score
-        self.type = "technical"
+        super().__init__(name, "technical", score)
+
 
     def calculate_score(self):
         """Returns a score worth 100% of the assessment."""
         return self.score
-    pass
 
 
 class PresentationAssessment(Assessment):
     """Subclass for a presentation assessment type."""
 
     def __init__(self, name: str, score: float):
-        self.name = name
-        self.score = score
-        self.type = "presentation"
+        super().__init__(name, "presentation", score)
 
     def calculate_score(self):
         """Returns a score worth 60% of the assessment."""
         score = self.score * 0.6
         return score
-    pass
 
 #####
 #
 # COPY YOUR CODE FROM LEVEL 1 ABOVE
 #
 #####
-
 
 if __name__ == "__main__":
     trainee = Trainee("Sigma", "trainee@sigmalabs.co.uk", date(1990, 1, 1))
