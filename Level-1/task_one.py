@@ -19,7 +19,15 @@ class Trainee:
         return float(age)
 
 class Assessment:
-    pass
+    def __init__(self, name: str, type: str, score: float):
+        self.name = name
+        self.type = type
+        self.score = score
+        if self.score < 0 or self.score > 100:
+            raise ValueError("Score can be between 0 and 100.")
+        valid_types = ["technical", "multiple-choice"]
+        if type not in valid_types:
+            raise ValueError("Not a valid type.")
 
 if __name__ == "__main__":
     trainee = Trainee("Sigma", "trainee@sigmalabs.co.uk", date(1990, 1, 1))
