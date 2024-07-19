@@ -18,11 +18,11 @@ class Trainee:
         age = relativedelta(today, self.date_of_birth).years
         return float(age)
     
-    def add_assessment(self, a):
+    def add_assessment(self, a) -> None:
         """Adds an Assessment object to the list of Trainee's assessments."""
         return self.assessments.append(a)
     
-    def get_assessment(self, assessment_name: str):
+    def get_assessment(self, assessment_name: str) -> None:
         """Returns the Assessment object if its name matches method parameter."""
         for item in self.assessments:
             if item.name == assessment_name:
@@ -37,7 +37,7 @@ class Assessment:
         self.score = score
         if self.score < 0 or self.score > 100:
             raise ValueError("Score can be between 0 and 100.")
-        valid_types = ["technical", "multiple-choice"]
+        valid_types = ["technical", "multiple-choice", "presentation"]
         if type not in valid_types:
             raise ValueError("Not a valid type.")
     
