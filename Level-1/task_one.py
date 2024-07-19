@@ -19,9 +19,18 @@ class Trainee:
         return float(age)
     
     def add_assessment(self, a):
+        """Adds an Assessment object to the list of Trainee's assessments."""
         return self.assessments.append(a)
+    
+    def get_assessment(self, assessment_name: str):
+        """Returns the Assessment object if its name matches method parameter."""
+        for item in self.assessments:
+            if item.name == assessment_name:
+                return item
+
 
 class Assessment:
+    """Create an object for a type of assessment with a title and score."""
     def __init__(self, name: str, type: str, score: float):
         self.name = name
         self.type = type
