@@ -125,6 +125,7 @@ class Marking:
         pass
 
     def mark(self) -> float:
+        """Counts points from quiz and returns result in %."""
         total_score = 0
         for question in self._quiz.questions:
             if question.chosen_answer == question.correct_answer:
@@ -132,7 +133,14 @@ class Marking:
         max_score = len(self._quiz.questions)
         final_mark = float(total_score * 100 / max_score)
         return final_mark
-
+    
+    def generate_assessment(self) -> Assessment:
+        """Generates an Assessment object based on the quiz type."""
+        if self._quiz.type == "multiple-choice":
+            score = self.mark()
+            return MultipleChoiceAssessment(self._quiz.name, score)
+        else:
+            raise ValueError("Not a multiple-choice quiz.")
 
 
 if __name__ == "__main__":
