@@ -141,8 +141,11 @@ class Marking:
         if self._quiz.type == "multiple-choice":
             score = self.mark()
             return MultipleChoiceAssessment(self._quiz.name, score)
+        if self._quiz.type == "technical":
+            score = self.mark()
+            return TechnicalAssessment(self._quiz.name, score)
         else:
-            raise ValueError("Not a multiple-choice quiz.")
+            raise ValueError("Not a valid quiz.")
 
 
 if __name__ == "__main__":
