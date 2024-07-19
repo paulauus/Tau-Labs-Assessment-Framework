@@ -17,6 +17,9 @@ class Trainee:
         # relativedelta provides the difference in years
         age = relativedelta(today, self.date_of_birth).years
         return float(age)
+    
+    def add_assessment(self, a):
+        return self.assessments.append(a)
 
 class Assessment:
     def __init__(self, name: str, type: str, score: float):
@@ -28,6 +31,8 @@ class Assessment:
         valid_types = ["technical", "multiple-choice"]
         if type not in valid_types:
             raise ValueError("Not a valid type.")
+    
+        
 
 if __name__ == "__main__":
     trainee = Trainee("Sigma", "trainee@sigmalabs.co.uk", date(1990, 1, 1))
