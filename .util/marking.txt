@@ -1,10 +1,10 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.12.4, pytest-8.2.2, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Fundamentals-Week-2/Assessment-Fundamentals-Week-2
-collected 9 items / 2 errors
+collected 15 items / 1 error
 
-!!!!!!!!!!!!!!!!!!! Interrupted: 2 errors during collection !!!!!!!!!!!!!!!!!!!!
-============================== 2 errors in 0.09s ===============================
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.12s ===============================
 ************* Module task_one
 Level-1/task_one.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
 Level-1/task_one.py:24:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -15,10 +15,19 @@ Level-1/task_one.py:34:34: W0622: Redefining built-in 'type' (redefined-builtin)
 Level-1/task_one.py:32:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 ************* Module task_two
 Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-2/task_two.py:19:14: E0602: Undefined variable 'Trainee' (undefined-variable)
-Level-2/task_two.py:22:27: E0602: Undefined variable 'MultipleChoiceAssessment' (undefined-variable)
-Level-2/task_two.py:24:27: E0602: Undefined variable 'TechnicalAssessment' (undefined-variable)
-Level-2/task_two.py:26:27: E0602: Undefined variable 'MultipleChoiceAssessment' (undefined-variable)
+Level-2/task_two.py:22:14: E0602: Undefined variable 'relativedelta' (undefined-variable)
+Level-2/task_two.py:31:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+Level-2/task_two.py:41:34: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:38:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-2/task_two.py:54:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
+Level-2/task_two.py:63:4: W0107: Unnecessary pass statement (unnecessary-pass)
+Level-2/task_two.py:52:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:69:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
+Level-2/task_two.py:76:4: W0107: Unnecessary pass statement (unnecessary-pass)
+Level-2/task_two.py:66:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:82:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
+Level-2/task_two.py:90:4: W0107: Unnecessary pass statement (unnecessary-pass)
+Level-2/task_two.py:79:0: R0903: Too few public methods (1/2) (too-few-public-methods)
 ************* Module task_three
 Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
 Level-3/task_three.py:17:0: C0115: Missing class docstring (missing-class-docstring)
@@ -32,5 +41,5 @@ Level-3/task_three.py:35:23: W0621: Redefining name 'quiz' from outer scope (lin
 Level-3/task_three.py:33:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 
 ------------------------------------------------------------------
-Your code has been rated at 4.15/10 (previous run: 4.15/10, +0.00)
+Your code has been rated at 6.98/10 (previous run: 6.98/10, +0.00)
 
