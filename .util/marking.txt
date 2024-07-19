@@ -9,13 +9,9 @@ Level-3/test_three_task.py .........                                     [100%]
 
 ============================== 24 passed in 0.04s ==============================
 ************* Module task_one
-Level-1/task_one.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:24:0: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:43:0: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:44:0: C0303: Trailing whitespace (trailing-whitespace)
-Level-1/task_one.py:25:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-Level-1/task_one.py:34:34: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-1/task_one.py:32:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-1/task_one.py:27:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
+Level-1/task_one.py:37:34: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-1/task_one.py:34:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 ************* Module task_two
 Level-2/task_two.py:35:0: C0303: Trailing whitespace (trailing-whitespace)
 Level-2/task_two.py:36:37: W0622: Redefining built-in 'type' (redefined-builtin)
@@ -32,5 +28,5 @@ Level-3/task_three.py:118:8: W0107: Unnecessary pass statement (unnecessary-pass
 Level-3/task_three.py:137:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 
 ------------------------------------------------------------------
-Your code has been rated at 9.02/10 (previous run: 9.02/10, +0.00)
+Your code has been rated at 9.22/10 (previous run: 9.22/10, +0.00)
 
