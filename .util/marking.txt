@@ -1,10 +1,13 @@
 ============================= test session starts ==============================
 platform linux -- Python 3.12.4, pytest-8.2.2, pluggy-1.5.0
 rootdir: /home/runner/work/Assessment-Fundamentals-Week-2/Assessment-Fundamentals-Week-2
-collected 15 items / 1 error
+collected 23 items
 
-!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
-=============================== 1 error in 0.12s ===============================
+Level-1/test_one_task.py .........                                       [ 39%]
+Level-2/test_two_task.py ......                                          [ 65%]
+Level-3/test_three_task.py ........                                      [100%]
+
+============================== 23 passed in 0.04s ==============================
 ************* Module task_one
 Level-1/task_one.py:20:0: C0303: Trailing whitespace (trailing-whitespace)
 Level-1/task_one.py:24:0: C0303: Trailing whitespace (trailing-whitespace)
@@ -14,32 +17,22 @@ Level-1/task_one.py:25:4: R1710: Either all return statements in a function shou
 Level-1/task_one.py:34:34: W0622: Redefining built-in 'type' (redefined-builtin)
 Level-1/task_one.py:32:0: R0903: Too few public methods (0/2) (too-few-public-methods)
 ************* Module task_two
-Level-2/task_two.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-2/task_two.py:22:14: E0602: Undefined variable 'relativedelta' (undefined-variable)
-Level-2/task_two.py:31:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-Level-2/task_two.py:41:34: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-2/task_two.py:38:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-2/task_two.py:54:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
-Level-2/task_two.py:63:4: W0107: Unnecessary pass statement (unnecessary-pass)
-Level-2/task_two.py:52:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-Level-2/task_two.py:69:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
-Level-2/task_two.py:76:4: W0107: Unnecessary pass statement (unnecessary-pass)
-Level-2/task_two.py:66:0: R0903: Too few public methods (1/2) (too-few-public-methods)
-Level-2/task_two.py:82:4: W0231: __init__ method from base class 'Assessment' is not called (super-init-not-called)
-Level-2/task_two.py:90:4: W0107: Unnecessary pass statement (unnecessary-pass)
-Level-2/task_two.py:79:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+Level-2/task_two.py:35:0: C0303: Trailing whitespace (trailing-whitespace)
+Level-2/task_two.py:36:37: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-2/task_two.py:48:34: W0622: Redefining built-in 'type' (redefined-builtin)
 ************* Module task_three
-Level-3/task_three.py:1:0: C0114: Missing module docstring (missing-module-docstring)
-Level-3/task_three.py:17:0: C0115: Missing class docstring (missing-class-docstring)
-Level-3/task_three.py:17:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-3/task_three.py:25:0: C0115: Missing class docstring (missing-class-docstring)
-Level-3/task_three.py:27:23: W0621: Redefining name 'questions' from outer scope (line 41) (redefined-outer-name)
-Level-3/task_three.py:27:51: W0622: Redefining built-in 'type' (redefined-builtin)
-Level-3/task_three.py:25:0: R0903: Too few public methods (0/2) (too-few-public-methods)
-Level-3/task_three.py:33:0: C0115: Missing class docstring (missing-class-docstring)
-Level-3/task_three.py:35:23: W0621: Redefining name 'quiz' from outer scope (line 48) (redefined-outer-name)
-Level-3/task_three.py:33:0: R0903: Too few public methods (0/2) (too-few-public-methods)
+Level-3/task_three.py:138:0: C0303: Trailing whitespace (trailing-whitespace)
+Level-3/task_three.py:41:37: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-3/task_three.py:53:34: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-3/task_three.py:105:0: C0115: Missing class docstring (missing-class-docstring)
+Level-3/task_three.py:113:0: C0115: Missing class docstring (missing-class-docstring)
+Level-3/task_three.py:115:23: W0621: Redefining name 'questions' from outer scope (line 153) (redefined-outer-name)
+Level-3/task_three.py:115:51: W0622: Redefining built-in 'type' (redefined-builtin)
+Level-3/task_three.py:121:0: C0115: Missing class docstring (missing-class-docstring)
+Level-3/task_three.py:123:23: W0621: Redefining name 'quiz' from outer scope (line 160) (redefined-outer-name)
+Level-3/task_three.py:125:8: W0107: Unnecessary pass statement (unnecessary-pass)
+Level-3/task_three.py:144:8: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
 
 ------------------------------------------------------------------
-Your code has been rated at 6.98/10 (previous run: 6.98/10, +0.00)
+Your code has been rated at 8.90/10 (previous run: 8.90/10, +0.00)
 
