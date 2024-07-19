@@ -24,6 +24,8 @@ class Trainee:
 
     def add_assessment(self, a) -> None:
         """Adds an Assessment object to the list of Trainee's assessments."""
+        if not isinstance(a, Assessment):
+            raise TypeError("Not a valid")
         return self.assessments.append(a)
 
     def get_assessment(self, assessment_name: str) -> None:
@@ -48,30 +50,43 @@ class Assessment:
 
 
 class MultipleChoiceAssessment(Assessment):
-    def __init__(self, name: str, type: str, score: float):
-        super().__init__(name, type, score)
+    """Subclass for a multiple choice assessment type."""
+    def __init__(self, name: str, score: float):
+        self.name = name
+        self.score = score
 
-    def calculate_score():
-        ...
+    def calculate_score(self):
+        """Returns a score worth 70% of the assessment."""
+        score = self.score * 0.7
+        return score
 
     pass
 
 
 class TechnicalAssessment(Assessment):
-    def __init__(self, name: str, type: str, score: float):
-        super().__init__(name, type, score)
+    """Subclass for a technical assessment type."""
 
-    def calculate_score():
-        ...
+    def __init__(self, name: str, score: float):
+        self.name = name
+        self.score = score
+
+    def calculate_score(self):
+        """Returns a score worth 100% of the assessment."""
+        return self.score
     pass
 
 
 class PresentationAssessment(Assessment):
-    def __init__(self, name: str, type: str, score: float):
-        super().__init__(name, type, score)
+    """Subclass for a presentation assessment type."""
 
-    def calculate_score():
-        ...
+    def __init__(self, name: str, score: float):
+        self.name = name
+        self.score = score
+
+    def calculate_score(self):
+        """Returns a score worth 60% of the assessment."""
+        score = self.score * 0.6
+        return score
     pass
 
 #####
